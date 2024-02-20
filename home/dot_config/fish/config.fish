@@ -6,7 +6,7 @@ if status is-interactive
     fish_add_path -g ~/.pyenv
     fish_add_path -g ~/.local/bin
 
-    set -gx RIPGREP_CONFIG_PATH ~/.config/.ripgreprc
+    set -gx RIPGREP_CONFIG_PATH ~/.config/ripgreprc
     set -gx EDITOR /usr/local/bin/nvim
 
     fish_vi_key_bindings

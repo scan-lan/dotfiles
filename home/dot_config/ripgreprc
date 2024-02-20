@@ -1,0 +1,5 @@
+# Don't search lockfiles
+--glob=!*-lock.json
+
+# Don't search in .git directories
+--glob=!.git
