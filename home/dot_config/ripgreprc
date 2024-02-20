@@ -3,3 +3,6 @@
 
 # Don't search in .git directories
 --glob=!.git
+
+# Include dotfiles in search by default
+--hidden
