@@ -1,0 +1,107 @@
+# # Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+command_timeout = 1000
+add_newline = false
+
+[git_status]
+ahead = '${count}⇡'
+diverged = '${ahead_count}⇡${behind_count}⇣'
+behind = '${count}⇣'
+modified = '${count}!'
+staged = '${count}+'
+untracked = '${count}?'
+
+[aws]
+format = '[$symbol($profile )(\[$duration\] )]($style)'
+symbol = "  "
+
+[buf]
+symbol = " "
+
+[c]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[directory]
+read_only = " "
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[git_branch]
+format = '[$symbol$branch(:$remote_branch)]($style) '
+symbol = " "
+ignore_branches = ['main', 'master']
+
+[golang]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[meson]
+symbol = "喝 "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+version_format = "${major}"
+symbol = " "
+
+[package]
+disabled = true
+symbol = " "
+
+[python]
+symbol = " "
+
+[rlang]
+symbol = "ﳒ "
+
+[ruby]
+symbol = " "
+
+[rust]
+version_format = "v${major}.${minor}"
+symbol = " "
+
+[scala]
+symbol = " "
+
+[spack]
+symbol = "🅢 "
+
+[terraform]
+disabled = true
+
