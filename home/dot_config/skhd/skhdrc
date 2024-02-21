@@ -1,5 +1,5 @@
 # Reload yabai
-ctrl + alt + cmd - r : yabai --restart-service
+alt + shift - z : yabai --restart-service
 
 # Focus spaces
 # ctrl - z : yabai -m space --focus recent
@@ -44,7 +44,7 @@ cmd - h : yabai -m space --focus prev
 cmd - l : yabai -m space --focus next
 
 # Switch between BSP and stack mode
-ctrl + shift - space : yabai -m space --layout \
+alt + shift - space : yabai -m space --layout \
   "$(yabai -m query --spaces --space | jq -r 'if .type == "bsp" then "stack" else "bsp" end')"
 
 
