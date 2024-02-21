@@ -1,0 +1,26 @@
+# Configure scripting addition: https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)#configure-scripting-addition
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
+# Layout/padding
+yabai -m config layout                       bsp
+yabai -m config top_padding                  3
+yabai -m config bottom_padding               3
+yabai -m config left_padding                 3
+yabai -m config right_padding                3
+yabai -m config window_gap                   10
+
+# Web browsers
+yabai -m rule --add app="^(Arc|Google Chrome|Firefox)$" space=1
+# Terminal
+yabai -m rule --add app="^(kitty|Alacritty|iTerm)$" space=2
+# Social
+yabai -m rule --add app="^(Slack|WhatsApp|Microsoft Teams)$" space=3
+
+# Text editors
+yabai -m rule --add app="^(Code|RStudio)$" space=3
+# Jetbrains apps
+apps="^(IntelliJ IDEA|WebStorm|RubyMine|PyCharm|DataGrip)$"
+yabai -m rule --add app="${apps}" space=4  manage=off
+# Music
+yabai -m rule --add app="^(Spotify|Amazon Music)$" space=5
