@@ -1,8 +1,9 @@
 # Reload yabai
 alt + shift - z : yabai --restart-service
 
-# Focus spaces
-# ctrl - z : yabai -m space --focus recent
+# Space navigation
+cmd - h : yabai -m space --focus prev
+cmd - l : yabai -m space --focus next
 ctrl - 1 : yabai -m space --focus 1
 ctrl - 2 : yabai -m space --focus 2
 ctrl - 3 : yabai -m space --focus 3
@@ -13,6 +14,20 @@ ctrl - 7 : yabai -m space --focus 7
 ctrl - 8 : yabai -m space --focus 8
 ctrl - 9 : yabai -m space --focus 9
 ctrl - 0 : yabai -m space --focus 10
+
+# Move window to spaces
+cmd + shift - h : yabai -m window --space prev; yabai -m space --focus prev
+cmd + shift - l : yabai -m window --space  next; yabai -m space --focus next
+ctrl + shift - 1 : yabai -m window --space  1; yabai -m space --focus 1
+ctrl + shift - 2 : yabai -m window --space  2; yabai -m space --focus 2
+ctrl + shift - 3 : yabai -m window --space  3; yabai -m space --focus 3
+ctrl + shift - 4 : yabai -m window --space  4; yabai -m space --focus 4
+ctrl + shift - 5 : yabai -m window --space  5; yabai -m space --focus 5
+ctrl + shift - 6 : yabai -m window --space  6; yabai -m space --focus 6
+ctrl + shift - 7 : yabai -m window --space  7; yabai -m space --focus 7
+ctrl + shift - 8 : yabai -m window --space  8; yabai -m space --focus 8
+ctrl + shift - 9 : yabai -m window --space  9; yabai -m space --focus 9
+ctrl + shift - 0 : yabai -m window --space 10; yabai -m space --focus 10
 
 # Forward window
 alt + shift - j: yabai -m query --spaces --space \
@@ -39,16 +54,12 @@ ctrl + fn - a : open -a "About This Mac"
 # ctrl + fn - m : open -na /Applications/Spotify.app
 # ctrl + fn - g : open -na /Applications/Signal.app
 
-# Better space navigation
-cmd - h : yabai -m space --focus prev
-cmd - l : yabai -m space --focus next
-
 # Switch between BSP and stack mode
 alt + shift - space : yabai -m space --layout \
   "$(yabai -m query --spaces --space | jq -r 'if .type == "bsp" then "stack" else "bsp" end')"
 
 
-
+# ctrl - z : yabai -m space --focus recent
 
 #  NOTE(koekeishiya): A list of all built-in modifier and literal keywords can
 #                     be found at https://github.com/koekeishiya/skhd/issues/1
