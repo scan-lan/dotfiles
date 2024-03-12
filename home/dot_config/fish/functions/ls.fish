@@ -1,3 +1,3 @@
-function ls --wraps='exa --icons -s ext --group-directories-first' --description 'alias ls exa --icons -s ext --group-directories-first'
-  exa --icons -s ext --group-directories-first $argv; 
+function ls --wraps='eza --icons -s ext --group-directories-first' --description 'alias ls eza --icons -s ext --group-directories-first'
+    eza --icons -s ext --group-directories-first $argv
 end
