@@ -110,7 +110,7 @@ disabled = false
 
 [aws]
 format = '[$symbol($profile )(\[$duration\] )]($style)'
-symbol = "  "
+symbol = " "
 
 [buf]
 symbol = " "
