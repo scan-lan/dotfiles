@@ -73,11 +73,3 @@ map("i", "∆", "<esc><cmd>m .+1<cr>==gi", { desc = "Move down" })
 map("i", "˚", "<esc><cmd>m .-2<cr>==gi", { desc = "Move up" })
 map("v", "∆", ":m '>+1<cr>gv=gv", { desc = "Move down" })
 map("v", "˚", ":m '<-2<cr>gv=gv", { desc = "Move up" })
-
--- Mini surround remaps
--- Remap adding surrounding to Visual mode selection
-vim.keymap.del("x", "ys")
-map("x", "S", [[:<C-u>lua MiniSurround.add('visual')<CR>]], { silent = true })
-
--- Make special mapping for "add surrounding for line"
-map("n", "yss", "ys_", { remap = true })
