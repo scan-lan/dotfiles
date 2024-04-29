@@ -18,4 +18,6 @@ yabai -m rule --add app="^(kitty|Alacritty|iTerm)$" space=1
 # Web browsers
 yabai -m rule --add app="^(Arc|Google Chrome|Firefox)$" space=2
 # Social
-yabai -m rule --add app="^(Slack|WhatsApp|Microsoft Teams|KeePassXC)$" space=3
+yabai -m rule --add app="^(Slack|WhatsApp|Microsoft Teams.*|KeePassXC)$" space=3
+# Obsidian
+yabai -m rule --add app="^(Obsidian)$" space=4
