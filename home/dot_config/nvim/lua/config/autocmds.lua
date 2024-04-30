@@ -35,8 +35,16 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 })
 
 vim.api.nvim_create_autocmd({ "FileType" }, {
+  group = augroup("md_textwidth"),
+  pattern = { "markdown" },
+  callback = function()
+    vim.opt_local.textwidth = 80
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "FileType" }, {
   group = augroup("md_conceal"),
-  pattern = { "markdown", "mdx" },
+  pattern = { "markdown" },
   callback = function()
     vim.opt_local.conceallevel = 2
     vim.opt_local.concealcursor = "n"
