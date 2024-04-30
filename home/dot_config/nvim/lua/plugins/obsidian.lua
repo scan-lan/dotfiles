@@ -37,6 +37,11 @@ return {
           path = "~/brain",
         },
       },
+      templates = {
+        subdir = "templates",
+        -- A map for custom variables, the key should be the variable and the value a function
+        -- substitutions = {},
+      },
     },
     keys = {
       { "<leader>ob", "<Cmd>ObsidianBacklinks<CR>", desc = "Show backlinks" },
