@@ -49,7 +49,12 @@ return {
       { "<leader>ot", "<Cmd>ObsidianTemplate<CR>", desc = "Insert template" },
       { "<leader>or", "<Cmd>ObsidianRename<CR>", desc = "Rename note" },
       { "<leader>oq", "<Cmd>ObsidianQuickSwitch<CR>", desc = "Quick switch" },
-      { "<leader>oe", "<Cmd>ObsidianExtractNote<CR>", desc = "Extract note" },
+      {
+        "<leader>oe",
+        ":ObsidianExtractNote<CR>",
+        desc = "Extract note",
+        mode = "v",
+      },
     },
   },
 
