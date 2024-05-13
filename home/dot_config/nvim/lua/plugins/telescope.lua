@@ -9,7 +9,6 @@ table.insert(vimgrep_arguments, "--hidden")
 table.insert(vimgrep_arguments, "--glob")
 table.insert(vimgrep_arguments, "!**/.git/*")
 
--- change some telescope options and a keymap to browse plugin files
 return {
   "nvim-telescope/telescope.nvim",
   dependencies = {
@@ -30,11 +29,26 @@ return {
       layout_config = { prompt_position = "top" },
       sorting_strategy = "ascending",
       winblend = 0,
+      mappings = {
+        n = {
+          ["<C-q>"] = "smart_send_to_qflist",
+        },
+        i = {
+          ["<C-q>"] = "smart_send_to_qflist",
+        },
+      },
     },
     pickers = {
       find_files = {
         -- `hidden = true` will still show the inside of `.git/` as it's not `.gitignore`d.
         find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+      },
+    },
+    extensions = {
+      file_browser = {
+        grouped = true,
+        hidden = true,
+        hide_parent_dir = true,
       },
     },
   },

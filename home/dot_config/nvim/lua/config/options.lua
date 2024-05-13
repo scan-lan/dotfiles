@@ -49,3 +49,5 @@ for k, v in pairs(opts) do
 end
 
 -- vim.cmd("set listchars=tab:>·,trail:~,extends:>,precedes:<,space:␣")
+
+vim.g.root_spec = { "cwd", "lsp", { ".git", "lua" } }
