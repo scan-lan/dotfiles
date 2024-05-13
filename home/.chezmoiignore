@@ -1,7 +1,7 @@
 lazyvim.json
-lazy-lock.json
 fish_variables
 kitty.conf
 .config/fish/completions/
 .config/nvim/spell/
+.config/nvim/lazy-lock.json
 .config/fish/*/nvm.fish
