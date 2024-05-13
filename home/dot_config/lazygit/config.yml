@@ -18,3 +18,7 @@ customCommands:
     context: "files"
     loadingText: "opening czg commit tool"
     subprocess: true
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never
