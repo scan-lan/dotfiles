@@ -4,3 +4,4 @@ fish_variables
 kitty.conf
 .config/fish/completions/
 .config/nvim/spell/
+.config/fish/*/nvm.fish
