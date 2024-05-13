@@ -50,5 +50,4 @@ SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
 SETUVAR fish_user_paths:/opt/homebrew/bin\x1e/usr/local/opt/fzf/bin
-SETUVAR nvm_default_version:v18
-SETUVAR nvm_mirror:https\x3a//nodejs\x2eorg/dist
+SETUVAR nvm_default_version:20
