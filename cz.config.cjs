@@ -81,6 +81,7 @@ module.exports = {
     "yabai",
     "skhd",
     "gitconfig",
+    "lazygit",
     "ripgrep",
     "bat",
     "chezmoi",
