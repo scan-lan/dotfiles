@@ -42,6 +42,16 @@ return {
         -- A map for custom variables, the key should be the variable and the value a function
         -- substitutions = {},
       },
+      disable_frontmatter = function(filename)
+        local patterns = { "brain/templates/" }
+        for _, pattern in ipairs(patterns) do
+          local result = filename.find(pattern)
+          if result ~= nil then
+            return true
+          end
+        end
+        return false
+      end,
     },
     keys = {
       { "<leader>ob", "<Cmd>ObsidianBacklinks<CR>", desc = "Show backlinks" },
