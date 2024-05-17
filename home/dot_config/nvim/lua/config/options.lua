@@ -48,6 +48,6 @@ for k, v in pairs(opts) do
   vim.opt[k] = v
 end
 
--- vim.cmd("set listchars=tab:>·,trail:~,extends:>,precedes:<,space:␣")
+vim.cmd("set listchars=tab:>·,trail:~,extends:>,precedes:<")
 
 vim.g.root_spec = { "cwd", "lsp", { ".git", "lua" } }
