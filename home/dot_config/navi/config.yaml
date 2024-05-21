@@ -20,8 +20,8 @@ finder:
 
 cheats:
   paths:
-    - /Users/luke.scanlan/.local/share/navi/cheats
-    - /Users/luke.scanlan/.config/navi/cheats # on unix-like os
+    - ~/.local/share/navi/cheats
+    - ~/.config/navi/cheats # on unix-like os
 #     - F:\\path\\to\\dir # on Windows
 # path: /path/to/some/dir # (DEPRECATED) equivalent to the --path option
 
