@@ -23,6 +23,7 @@ return {
         end
         return title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
       end,
+
       -- Optional, by default when you use `:ObsidianFollowLink` on a link to an external
       -- URL it will be ignored but you can customize this behavior here.
       ---@param url string
@@ -31,27 +32,29 @@ return {
         vim.fn.jobstart({ "open", url }) -- Mac OS
         -- vim.fn.jobstart({"xdg-open", url})  -- linux
       end,
+
       workspaces = {
         {
           name = "brain",
           path = "~/brain",
         },
       },
+
       templates = {
         subdir = "templates",
         -- A map for custom variables, the key should be the variable and the value a function
         -- substitutions = {},
       },
-      disable_frontmatter = function(filename)
-        local patterns = { "brain/templates/" }
-        for _, pattern in ipairs(patterns) do
-          local result = filename.find(pattern)
-          if result ~= nil then
-            return true
-          end
-        end
-        return false
-      end,
+      -- disable_frontmatter = function(filename)
+      --   local patterns = { "brain/templates/" }
+      --   for _, pattern in ipairs(patterns) do
+      --     local result = filename.find(pattern)
+      --     if result ~= nil then
+      --       return true
+      --     end
+      --   end
+      --   return false
+      -- end,
     },
     keys = {
       { "<leader>ob", "<Cmd>ObsidianBacklinks<CR>", desc = "Show backlinks" },
@@ -72,7 +75,7 @@ return {
     "folke/which-key.nvim",
     opts = {
       defaults = {
-        ["<leader>o"] = { name = "+Obsidian" },
+        ["<leader>o"] = { name = "+obsidian" },
       },
     },
   },
