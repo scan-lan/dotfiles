@@ -21,6 +21,7 @@ map(
 )
 
 -- Shortcuts
+map({ "i", "c", "t", "l" }, "<A-BS>", "<C-W>", { noremap = true })
 map(
   "",
   "<leader>h",
