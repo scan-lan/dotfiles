@@ -37,3 +37,4 @@ nvm use default --silent
 
 alias assume="source /usr/local/bin/assume.fish"
 zoxide init fish --cmd cd | source
+fish_ssh_agent
