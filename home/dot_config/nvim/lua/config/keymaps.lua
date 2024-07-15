@@ -40,12 +40,6 @@ map(
   ":keepjumps normal! ggVG<cr>",
   { noremap = true, silent = true, desc = "Select all" }
 )
-map(
-  "n",
-  "<leader>r",
-  [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
-  { noremap = true, desc = "Replace word under cursor" }
-)
 
 -- Prevent "x" from modifying register
 map("", "x", '"_x', opts)
@@ -66,6 +60,10 @@ map(
   '"+p',
   { noremap = true, desc = "Paste from clipboard" }
 )
+
+-- Better indents
+map("v", ">", ">gv", { desc = "indent" })
+map("v", "<", "<gv", { desc = "unindent" })
 
 -- Move Lines
 map("n", "∆", "<cmd>m .+1<cr>==", { desc = "Move down" })
