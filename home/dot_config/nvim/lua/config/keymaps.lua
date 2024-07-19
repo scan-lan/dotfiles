@@ -40,6 +40,29 @@ map(
   { noremap = true, silent = true, desc = "Select all" }
 )
 
+-- Toggle autocomplete
+local Util = require("lazyvim.util")
+
+-- Toggle Autocomplete with <TAB>
+map("n", "<leader>u<tab>", function()
+  -- vim.g.autocomplete == nil is treated as true
+  vim.g.autocomplete = vim.g.autocomplete == false
+  if vim.g.autocomplete then
+    Util.warn("Enabled Autocomplete", { title = "Autocomplete (global)" })
+  else
+    Util.info("Disabled Autocomplete", { title = "Autocomplete (global)" })
+  end
+  require("cmp").setup({
+    enabled = function()
+      if vim.api.nvim_get_option_value("buftype", { buf = 0 }) == "prompt" then
+        return false
+      else
+        return vim.g.autocomplete
+      end
+    end,
+  })
+end, { desc = "Toggle Autocomplete †" })
+
 -- Prevent "x" from modifying register
 map("", "x", '"_x', opts)
 map("", "X", '"_X', opts)
