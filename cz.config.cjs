@@ -96,7 +96,7 @@ module.exports = {
   allowBreakingChanges: ["feat", "fix"],
   breaklineNumber: 80,
   breaklineChar: "|",
-  skipQuestions: ["footer", "footerPrefix", "confirmCommit"],
+  skipQuestions: ["footer", "breaking", "footerPrefix", "confirmCommit"],
   issuePrefixes: [
     { value: "closed", name: "closed:   ISSUES has been processed" },
   ],
