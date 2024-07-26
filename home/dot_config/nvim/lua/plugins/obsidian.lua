@@ -56,12 +56,39 @@ return {
       --   return false
       -- end,
     },
+    daily_notes = {
+      -- Optional, if you keep daily notes in a separate directory.
+      folder = "dailies",
+      -- Optional, if you want to change the date format for the ID of daily notes.
+      -- date_format = "%Y-%m-%d",
+      -- Optional, if you want to change the date format of the default alias of daily notes.
+      -- alias_format = "%B %-d, %Y",
+      -- Optional, default tags to add to each new daily note created.
+      -- default_tags = { "daily-notes" },
+      -- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
+      template = nil,
+    },
     keys = {
       { "<leader>ob", "<Cmd>ObsidianBacklinks<CR>", desc = "Show backlinks" },
       { "<leader>on", "<Cmd>ObsidianNew<CR>", desc = "New note" },
       { "<leader>ot", "<Cmd>ObsidianTemplate<CR>", desc = "Insert template" },
       { "<leader>or", "<Cmd>ObsidianRename<CR>", desc = "Rename note" },
       { "<leader>oq", "<Cmd>ObsidianQuickSwitch<CR>", desc = "Quick switch" },
+      {
+        "<leader>od",
+        "<Cmd>ObsidianToday<CR>",
+        desc = "Open today's daily note",
+      },
+      {
+        "<leader>oy",
+        "<Cmd>ObsidianYesterday<CR>",
+        desc = "Open yesterday's daily note",
+      },
+      {
+        "<leader>om",
+        "<Cmd>ObsidianTomorrow<CR>",
+        desc = "Open tomorrow's daily note",
+      },
       {
         "<leader>oe",
         ":ObsidianExtractNote<CR>",
