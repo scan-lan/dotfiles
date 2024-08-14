@@ -15,6 +15,12 @@ return {
       "nvim-lua/plenary.nvim",
     },
     opts = {
+      ui = {
+        -- use markdown.nvim instead for these
+        checkboxes = {},
+        bullets = {},
+        external_link_icon = {},
+      },
       ---@param title string|?
       ---@return string
       note_id_func = function(title)
