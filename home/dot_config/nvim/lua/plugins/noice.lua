@@ -10,6 +10,12 @@ return {
           silent = true,
         },
       },
+      -- cmdline = {
+      --   enabled = false,
+      -- },
+      -- presets = {
+      --   command_palette = false,
+      -- },
     },
   },
 }
