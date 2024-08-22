@@ -68,3 +68,12 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     -- vim.opt_local.concealcursor = "n"
   end,
 })
+
+-- Restart prettierd if prettier config files change
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+  group = vim.api.nvim_create_augroup("RestartPrettierd", { clear = true }),
+  pattern = "*prettier*",
+  callback = function()
+    vim.fn.system("prettierd restart")
+  end,
+})
