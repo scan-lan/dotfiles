@@ -3,7 +3,7 @@ return {
   opts = {
     labels = "tnsericahdfpyolugmvjqwbzkx",
     jump = {
-      autojump = true,
+      autojump = false,
       -- clear highlight after jump
       nohlsearch = true,
       -- Enable this to use rainbow colors to highlight labels
