@@ -1,6 +1,10 @@
 # Reload yabai
 alt + shift - z : yabai --restart-service
 
+# Display navigation
+cmd - j: yabai -m display --focus next
+cmd - k: yabai -m display --focus prev
+
 # Space navigation
 cmd - h : yabai -m space --focus prev
 cmd - l : yabai -m space --focus next
