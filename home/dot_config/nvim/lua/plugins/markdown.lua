@@ -2,6 +2,36 @@ return {
   {
     "MeanderingProgrammer/markdown.nvim",
     opts = {
+      checkbox = {
+        -- Turn on / off checkbox state rendering
+        enabled = true,
+        unchecked = {
+          -- Replaces '[ ]' of 'task_list_marker_unchecked'
+          icon = "  󰄱 ",
+          -- Highlight for the unchecked icon
+          highlight = "RenderMarkdownUnchecked",
+        },
+        checked = {
+          -- Replaces '[x]' of 'task_list_marker_checked'
+          icon = "  󰱒 ",
+          -- Highligh for the checked icon
+          highlight = "RenderMarkdownChecked",
+        },
+        -- Define custom checkbox states, more involved as they are not part of the markdown grammar
+        -- As a result this requires neovim >= 0.10.0 since it relies on 'inline' extmarks
+        -- Can specify as many additional states as you like following the 'todo' pattern below
+        --   The key in this case 'todo' is for healthcheck and to allow users to change its values
+        --   'raw':       Matched against the raw text of a 'shortcut_link'
+        --   'rendered':  Replaces the 'raw' value when rendering
+        --   'highlight': Highlight for the 'rendered' icon
+        custom = {
+          todo = {
+            raw = "[-]",
+            rendered = "  󰥔 ",
+            highlight = "RenderMarkdownTodo",
+          },
+        },
+      },
       bullet = {
         -- Turn on / off list bullet rendering
         enabled = true,
