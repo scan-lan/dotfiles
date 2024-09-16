@@ -247,7 +247,7 @@ git:
     autoWrapCommitMessage: true
 
     # If autoWrapCommitMessage is true, the width to wrap to
-    autoWrapWidth: 72
+    autoWrapWidth: 80
 
   # Config relating to merging
   # merging:
