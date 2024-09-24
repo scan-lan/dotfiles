@@ -85,6 +85,7 @@ module.exports = {
     "ripgrep",
     "bat",
     "chezmoi",
+    "aws",
   ],
   allowCustomScopes: true,
   allowEmptyScopes: false,
