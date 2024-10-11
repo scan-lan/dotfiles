@@ -3,7 +3,13 @@ return {
   opts = {
     server = {
       cmd = {
-        "sonarlint-language-server",
+        "java",
+        "-jar",
+        vim.fn.expand(
+          "$MASON/packages/sonarlint-language-server/extension/server/sonarlint-ls.jar"
+        ),
+        "-stdio",
+        "-analyzers",
         -- Ensure that sonarlint-language-server uses stdio channel
         "-stdio",
         "-analyzers",
