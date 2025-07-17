@@ -74,9 +74,10 @@ module.exports = {
   themeColorCode: "",
   scopes: [
     "nvim",
-    "starship",
     "fish",
+    "starship",
     "kitty",
+    "czg",
     "navi",
     "yabai",
     "skhd",
