@@ -13,10 +13,10 @@ yabai -m config window_gap                   5
 # Mouse
 yabai -m config mouse_follows_focus on
 
-# Terminal
-yabai -m rule --add app="^(kitty|Alacritty|iTerm)$" space=1
 # Web browsers
-yabai -m rule --add app="^(Arc|Google Chrome|Firefox)$" space=2
+yabai -m rule --add app="^(Arc|Google Chrome|Firefox)$" space=1
+# Terminal
+yabai -m rule --add app="^(kitty|Alacritty|iTerm)$" space=2
 # Social
 yabai -m rule --add app="^(Slack|WhatsApp|Microsoft Teams.*|KeePassXC)$" space=3
 # Obsidian
