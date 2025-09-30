@@ -11,6 +11,7 @@ end
 
 set -gx EDITOR /usr/local/bin/nvim
 starship init fish | source
+pyenv init - fish | source
 navi widget fish | source
 
 # projects
