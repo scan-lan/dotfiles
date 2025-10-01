@@ -1,7 +1,7 @@
 -- local gen_animation = require("mini.indentscope").gen_animation
 
 return {
-  -- "echasnovski/mini.indentscope",
+  -- "nvim-mini/mini.indentscope",
   -- opts = {
   --   draw = {
   --     delay = 10,
