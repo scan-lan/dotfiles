@@ -9,6 +9,8 @@ table.insert(vimgrep_arguments, "--hidden")
 table.insert(vimgrep_arguments, "--glob")
 table.insert(vimgrep_arguments, "!**/.git/*")
 
+local actions = require("telescope.actions")
+
 return {
   "nvim-telescope/telescope.nvim",
   dependencies = {
@@ -38,6 +40,8 @@ return {
       mappings = {
         n = {
           ["<C-q>"] = "smart_send_to_qflist",
+          ["J"] = actions.preview_scrolling_down,
+          ["K"] = actions.preview_scrolling_up,
         },
         i = {
           ["<C-q>"] = "smart_send_to_qflist",
